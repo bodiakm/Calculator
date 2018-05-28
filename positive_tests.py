@@ -13,7 +13,7 @@ class CalculatorTest(unittest.TestCase):
         self.assertEqual(expected_result, result)
 
     def test_one_number(self):
-        for x in ("-1","0", "1", "10", "9999"):
+        for x in ("0", "1", "10", "9999"):
             result = add(x)
             expected_result = int(float(x))
             self.assertEqual(expected_result, result)
@@ -27,7 +27,7 @@ class CalculatorTest(unittest.TestCase):
         """
         Adds negatives and 0 to the addition
         """
-        numbers = ("-1", "0", "1", "-10", "9999")
+        numbers = ("0", "1", "9999")
         for x in numbers:
             for y in numbers:
                 result = add("%s,%s" % (x, y))

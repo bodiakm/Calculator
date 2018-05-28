@@ -16,5 +16,8 @@ def add(numbers):
         extracted_numbers = re.findall('[-\d]+', numbers)
         converted_to_int = list(map(int, extracted_numbers))
         for i in converted_to_int:
-            result += i
-        return result
+            if i < 0:
+                raise ValueError('Negatives not allowed: %s' % converted_to_int)
+            elif i > 0:
+                result += i
+    return result
