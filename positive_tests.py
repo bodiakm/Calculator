@@ -1,4 +1,5 @@
 import unittest
+
 from main_calculator import add
 
 
@@ -6,26 +7,32 @@ class CalculatorTest(unittest.TestCase):
 
     def test_no_numbers(self):
         """
-        Validates that if an empty string is passed 0 is returned
+        Validates that if an empty string is passed, 0 is returned
         """
         result = add("")
         expected_result = 0
         self.assertEqual(expected_result, result)
 
     def test_one_number(self):
+        """
+        Validates that if one number is passed, same number is returned
+        """
         for x in ("0", "1", "10", "999"):
             result = add(x)
             expected_result = int(x)
             self.assertEqual(expected_result, result)
 
     def test_two_numbers(self):
+        """
+        Validates addition of two numbers
+        """
         result = add("7, 5")
         expected_result = 12
         self.assertEqual(expected_result, result)
 
     def test_two_numbers_extended(self):
         """
-        Adds negatives and 0 to the addition
+        Validates addition of more number pairs
         """
         numbers = ("0", "1", "999", "1000")
         for x in numbers:
@@ -56,6 +63,6 @@ class CalculatorTest(unittest.TestCase):
         """
         Validate function handles different delimiters OK
         """
-        result = add("//[;]\n1;2****&$^#W[]<\}{>")
-        expected_result = 3
+        result = add("//[;]\n1;(*_*)2****&$^#7W[]<\}{>")
+        expected_result = 10
         self.assertEqual(expected_result, result)

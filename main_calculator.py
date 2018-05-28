@@ -6,6 +6,13 @@ class Calculator:
 
 
 def add(numbers):
+    """
+    A function that accepts a string as input, extracts all numbers from it and
+    sums them up.
+    Negatives are not allowed and numbers over 1000 are ignored.
+    Newline at the end of the string is not supported.
+    Many types of delimiters are supported.
+    """
     result = 0
     last_two = len(numbers) - 2
 
