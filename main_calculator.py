@@ -6,8 +6,8 @@ class Calculator:
 
 def add(string):
     result = 0
-    integer_list = re.findall(r'\d+', string)
-    y = list(map(int, integer_list))
-    for item in integer_list:
+    extracted_numbers = re.findall(r'\d+', string)
+    converted = list(map(int, extracted_numbers))
+    for item in converted:
         result = result + item
     return result
