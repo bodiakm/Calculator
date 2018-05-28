@@ -27,7 +27,7 @@ class CalculatorTest(unittest.TestCase):
         """
         Adds negatives and 0 to the addition
         """
-        numbers = ("0", "1", "9999")
+        numbers = ("0", "1", "999", "1000")
         for x in numbers:
             for y in numbers:
                 result = add("%s,%s" % (x, y))
@@ -39,7 +39,7 @@ class CalculatorTest(unittest.TestCase):
         Validate that the program accepts and performs correct
         addition on a string containing more than 2 numbers
         """
-        x = range(0, 10)
+        x = list(range(10))
         result = add("%s" % x)
         expected_result = 45
         self.assertEqual(expected_result, result)

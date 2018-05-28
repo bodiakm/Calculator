@@ -19,7 +19,7 @@ class CalculatorTest(unittest.TestCase):
         try:
             add("1,44444444\n")
         except ValueError as err:
-            print err.args
+            print(err.args)
 
     def test_negatives(self):
         """
@@ -32,4 +32,4 @@ class CalculatorTest(unittest.TestCase):
                 try:
                     add("%s,%s" % (x, y))
                 except ValueError as err:
-                    print err.args
+                    print(err.args)

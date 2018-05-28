@@ -18,6 +18,6 @@ def add(numbers):
         for i in converted_to_int:
             if i < 0:
                 raise ValueError('Negatives not allowed: %s' % converted_to_int)
-            elif i > 0:
+            elif i >= 0:
                 result += i
     return result
