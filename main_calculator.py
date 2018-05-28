@@ -1,8 +1,13 @@
+import re
+
+
 class Calculator:
     pass
 
-def add(*args):
+def add(string):
     result = 0
-    for arg in args:
-        result = result + int(arg)
+    integer_list = re.findall(r'\d+', string)
+    y = list(map(int, integer_list))
+    for item in integer_list:
+        result = result + item
     return result
