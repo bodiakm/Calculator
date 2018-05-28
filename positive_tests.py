@@ -13,9 +13,9 @@ class CalculatorTest(unittest.TestCase):
         self.assertEqual(expected_result, result)
 
     def test_one_number(self):
-        for x in ("0", "1", "10", "9999"):
+        for x in ("0", "1", "10", "999"):
             result = add(x)
-            expected_result = int(float(x))
+            expected_result = int(x)
             self.assertEqual(expected_result, result)
 
     def test_two_numbers(self):
@@ -31,7 +31,7 @@ class CalculatorTest(unittest.TestCase):
         for x in numbers:
             for y in numbers:
                 result = add("%s,%s" % (x, y))
-                expected_result = int(float(x)) + int(float(y))
+                expected_result = int(x) + int(y)
         self.assertEqual(expected_result, result)
 
     def test_ten_numbers(self):

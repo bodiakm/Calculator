@@ -33,3 +33,11 @@ class CalculatorTest(unittest.TestCase):
                     add("%s,%s" % (x, y))
                 except ValueError as err:
                     print(err.args)
+
+    def test_higher_than_1000(self):
+        """
+        Validate add function ignores numbers over 1000
+        """
+        result = add("1,1000,1001,1002,9999")
+        expected_result = 1001
+        self.assertEqual(expected_result, result)
