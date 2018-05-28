@@ -56,6 +56,6 @@ class CalculatorTest(unittest.TestCase):
         """
         Validate function handles different delimiters OK
         """
-        result = add("//[;]\n1;2*&$^#W[]<\}{>")
+        result = add("//[;]\n1;2****&$^#W[]<\}{>")
         expected_result = 3
         self.assertEqual(expected_result, result)

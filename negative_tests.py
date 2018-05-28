@@ -23,7 +23,7 @@ class CalculatorTest(unittest.TestCase):
 
     def test_negatives(self):
         """
-        Validate add function raises error for new line at the end
+        Validate error raised when negative numbers are added
         """
         negative_numbers = ("-1", "-100", "-9999")
         positive_numbers = ("-7", "1", "9999")
@@ -40,4 +40,13 @@ class CalculatorTest(unittest.TestCase):
         """
         result = add("1,1000,1001,1002,9999")
         expected_result = 1001
+        self.assertEqual(expected_result, result)
+
+    def test_float(self):
+        """
+        Validate floats are not supported, its composing numbers are
+        summed up individually, e.g. 5.2 turns to 5 and 2
+        """
+        result = add("7, 5.2")
+        expected_result = 14
         self.assertEqual(expected_result, result)

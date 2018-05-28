@@ -17,9 +17,7 @@ def add(numbers):
         converted_to_int = list(map(int, extracted_numbers))
         for i in converted_to_int:
             if i < 0:
-                raise ValueError('Negatives not allowed: %s' % converted_to_int)
+                raise ValueError('Negative(s) in %s not allowed' % converted_to_int)
             elif 0 <= i <= 1000:
                 result += i
-            elif i > 1000:
-                return result
     return result
