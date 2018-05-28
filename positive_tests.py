@@ -32,12 +32,12 @@ class CalculatorTest(unittest.TestCase):
                 expected_result = int(x) + int(y)
         self.assertEqual(expected_result, result)
 
-    def test_addition_three_numbers(self):
-        # Needs improvement
-        try:
-            add(1,2,3)
-        except:
-            TypeError
+#    def test_addition_three_numbers(self):
+#        # Needs improvement
+#        try:
+#            add(1,2,3)
+#        except:
+#            TypeError
 
     def test_addition_string(self):
         # Needs improvement

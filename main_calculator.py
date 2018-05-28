@@ -1,7 +1,8 @@
 class Calculator:
     pass
 
-
-def add(input1=0, input2=0):
-    result = int(input1) + int(input2)
+def add(*args):
+    result = 0
+    for arg in args:
+        result = result + int(arg)
     return result
